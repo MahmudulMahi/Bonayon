@@ -1,3 +1,51 @@
-<html>
-    <p>this is details</p>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load cart %}
+{% load custom_filter %}
+<!-- body -->
+<div class="container bootdey">
+    <div class="col-md-12">
+        <br/>
+    <section class="panel">
+          <div class="panel-body">
+              <div class="col-md-4"  style="float: left;">
+                  
+                  <div class="pro-img-details">
+                        <img style="width: 300px; height: 600px;" src="{{ product.image.url }}" alt="">
+                    </div>
+                  
+                  
+              </div>
+              <div class="col-md-8" style="float: left;">
+                  
+                    <h4 class="pro-d-title">
+                        <a href="#" class="">
+                            {{ product.name }}
+                        </a>
+                    </h4>
+                  
+                  <p>{{ product.category }}</p>
+                  <div class="product_meta">
+                      <span class="posted_in"> <strong>Categories: </strong> {{ product.category }}</span>
+                      <span class="tagged_as"><strong>Tags:</strong> <a rel="tag" href="#">mens</a>, <a rel="tag" href="#">womens</a>.</span>
+                  </div>
+                  <div class="m-bot15"> <strong>Price : </strong> <span class="amount-old">{{ product.price }}</span></div>
+                  <br/>
+
+                  <h4 class="pro-d-title">
+                    <a href="#" class="">
+                        Caring Description
+                    </a>
+                </h4>
+                <p>{{ details.details }}</p>
+              </div>
+          </div>
+      </section>
+      </div>
+      </div>
+
+
+
+{% endblock %}
