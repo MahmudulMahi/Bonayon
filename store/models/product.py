@@ -22,4 +22,9 @@ class Product(models.Model):
         if category_id:
             return Product.objects.filter(category = category_id)
         else:
-            return Product.get_all_products();
+            return Product.get_all_products()
+
+
+class Product_Details(models.Model):
+    product = models.OneToOneField(Product,on_delete=models.CASCADE)
+    details = models.TextField()
