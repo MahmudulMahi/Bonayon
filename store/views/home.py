@@ -1,10 +1,17 @@
 from django.shortcuts import render , redirect , HttpResponseRedirect
-from store.models.product import Product
+from store.models.product import Product,Product_Details
 from store.models.category import Category
 from django.views import View
 
 
 # Create your views here.
+def Details(request,pk):
+    product = Product.objects.get(id=pk)
+    details = Product_Details.objects.get(product=product)
+    return render(request,'details.html',{'product' : product,'details':details})
+
+
+
 class Index(View):
 
     def post(self , request):
