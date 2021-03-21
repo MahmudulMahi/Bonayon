@@ -24,6 +24,9 @@ class Product(models.Model):
         else:
             return Product.get_all_products()
 
+    def __str__(self):
+        return self.name
+
 
 class Product_Details(models.Model):
     product = models.OneToOneField(Product,on_delete=models.CASCADE)
