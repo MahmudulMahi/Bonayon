@@ -33,3 +33,4 @@ class Product(models.Model):
 class Product_Details(models.Model):
     product = models.OneToOneField(Product,on_delete=models.CASCADE)
     details = models.TextField()
+    uses = models.TextField(null=True,default="empty")
