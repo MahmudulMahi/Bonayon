@@ -28,6 +28,8 @@ class Product(models.Model):
         return self.name
 
 
+
+
 class Product_Details(models.Model):
     product = models.OneToOneField(Product,on_delete=models.CASCADE)
     details = models.TextField()
