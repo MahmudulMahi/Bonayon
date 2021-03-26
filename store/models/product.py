@@ -34,3 +34,4 @@ class Product_Details(models.Model):
     product = models.OneToOneField(Product,on_delete=models.CASCADE)
     details = models.TextField()
     uses = models.TextField(null=True,default="empty")
+    show = models.BooleanField(default=False)

@@ -35,13 +35,24 @@
                   </div>
                   <div class="m-bot15"> <strong>Price : </strong> <span class="amount-old">{{ product.price }}</span></div>
                   <br/>
-
+                  {% if details.show is not True %}
                   <h4 class="pro-d-title">
                     <a href="#" class="">
                        গাছের  পরিচর্যা:
                     </a>
                 </h4>
                 <p>{{ details.details }}</p>
+                {% endif %}
+                <br/>
+                {% if details.show is True %}
+
+                <h4 class="pro-d-title">
+                    <a href="#" class="">
+                       ব্যবহার বিধিঃ
+                    </a>
+                </h4>
+                <p>{{ details.uses }}</p>
+                {% endif %}
               </div>
           </div>
       </section>
