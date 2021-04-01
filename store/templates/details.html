@@ -33,15 +33,18 @@
                       <span class="posted_in"> <strong>Categories: </strong> {{ product.category }}</span>
                       
                   </div>
+
                   <div class="m-bot15"> <strong>Price : </strong> <span class="amount-old">{{ product.price }}</span></div>
                   <br/>
-                  {% if details.show is not True %}
+
+
+                  {% if details.details_show is True %}
                   <h4 class="pro-d-title">
                     <a href="#" class="">
                        গাছের  পরিচর্যা:
                     </a>
-                </h4>
-                <p>{{ details.details }}</p>
+
+                <h6>{{ details.details }}</h6>
                 {% endif %}
                 <br/>
                 {% if details.show is True %}
@@ -53,7 +56,36 @@
                 </h4>
                 <p>{{ details.uses }}</p>
                 {% endif %}
-              </div>
+                    {% if details.diseases_show is True %}
+
+                <h4 class="pro-d-title">
+                    <a href="#" class="">
+                       গাছের রোগ:
+                    </a>
+                </h4>
+                <p>{{ details.diseases }}</p>
+                {% endif %}
+                      {% if details.care_growing1_show is True %}
+
+                <h4 class="pro-d-title">
+                    <a href="#" class="">
+                       গাছের বৃদ্ধি:
+                    </a>
+                </h4>
+                <p>{{ details.care_growing }}</p>
+                {% endif %}
+
+                            {% if details.fartilizer_show is True %}
+
+                <h4 class="pro-d-title">
+                    <a href="#" class="">
+                      সারের ব্যাবহার :
+                    </a>
+                </h4>
+                <p>{{ details.fartilizer }}</p>
+                {% endif %}
+                </div>
+
           </div>
       </section>
       </div>

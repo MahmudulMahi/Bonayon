@@ -32,6 +32,13 @@ class Product(models.Model):
 
 class Product_Details(models.Model):
     product = models.OneToOneField(Product,on_delete=models.CASCADE)
-    details = models.TextField()
+    details = models.TextField(null=True,default="empty")
+    details_show=models.BooleanField(default=False)
     uses = models.TextField(null=True,default="empty")
     show = models.BooleanField(default=False)
+    diseases=models.TextField(null=True,default="empty")
+    diseases_show=models.BooleanField(default=False)
+    care_growing=models.TextField(null=True,default="empty")
+    care_growing1_show= models.BooleanField(default=False)
+    fartilizer=models.TextField(null=True,default="empty")
+    fartilizer_show=models.BooleanField(default=False)
