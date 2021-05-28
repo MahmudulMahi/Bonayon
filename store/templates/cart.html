@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-
+{% load static %}
 {% block content %}
 {% load cart %}
 {% load custom_filter %}
@@ -79,6 +79,20 @@
                     <label for="">Phone</label>
                     <input type="text" name="phone" id="" class="form-control" placeholder="" aria-describedby="helpId">
                   </div>
+                    <div>
+                        <div class="form-check">
+                       <label class="form-check-label">
+                       <input type="checkbox" class="form-check-input" value="">Payment when delivery
+                       </label>
+                       </div>
+                        <center>
+                            <img src={% static 'img/bkash_payment.png' %} />
+                        </center>
+                        <div class="form-group">
+                            <label for="">Bkash Number</label>
+                            <input type="text" name="phone" id="" class="form-control" placeholder="01763365912" aria-describedby="helpId">
+                          </div>
+                    </div>
 
                   <input type="submit" class="btn float-right btn-outline-info col-lg-6" value="Order">
             </form>

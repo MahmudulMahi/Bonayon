@@ -25,3 +25,5 @@ class Order(models.Model):
         return Order.objects.filter(customer=customer_id).order_by('-date')
 
 
+
+
