@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'store',
     'bkash',
+    'rest_framework',
+    'bkashapi',
 
 ]
 # BKASH_APP_KEY = // bkash app key
